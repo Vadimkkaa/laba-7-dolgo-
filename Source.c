@@ -55,6 +55,16 @@ int main() {
 				ff[i - 1] = ff[i + 1];
 			}
 			v--;
+			if (v == 0) {
+				if (ff[0] == '\0') {
+					printf("No symbols left");
+					free(ff);
+					return 0;
+				}
+				puts(ff);
+				free(ff);
+				return 0;
+			}
 			m--;
 			i = m;
 			if (m == 0) {
